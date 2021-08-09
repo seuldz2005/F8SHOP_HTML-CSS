@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+
+
+<!-- 1. Inline (Ghi trực tiếp vào) có Priority = 1000 (lớn nhất)
+
+2. #id {} (Khai báo trên style hoặc main.css) 
+
+Ghi trên đối tượng: <h1 id="ID mình nhập">Priority</h1>
+* ID KHÔNG ĐƯỢC TRÙNG NHAU
+
+3. .class {} (Khai báo trên style hoặc main.css)
+Ghi trên đối tượng: <h1 class="class mình nhập">Priority</h1>
+
+4. tag là khai báo đối tượng trên <style></style> hoặc main.css 
+
+5. Nếu trùng id, class, tag thì cái nào ghi dưới sẽ có Priority đc ưu tiên hơn 
+
+6. Để đặt ưu tiên lớn nhất sài !important -->
+
+
+
+<html>
+    <head>
+        <title>Priority Practice</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="main.css">
+
+        <style>
+            #id-main {
+                color: yellow;
+            }
+
+            .class-main {
+                color: pink;
+            }
+
+            h1 {
+                color: blue;
+            }
+
+
+            /* có thể sử dụng tag#id.class {} để tăng priority cho đối tượng
+            VD:
+            h1#id-main.class-main {
+                color pink;
+
+            } */
+
+
+        </style>
+    </head>
+
+    <body>
+        <h1 style="color: red;">Priority - 1000</h1>
+        <h1 id="id-main">Priority - 100</h1>
+        <h1 class="class-main">Priority - 10</h1>
+        <h1>Priority - 1</h1>
+        
+    </body>
+
+</html>
