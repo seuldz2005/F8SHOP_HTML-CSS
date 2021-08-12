@@ -1,0 +1,93 @@
+<!-- PSEUDO-ELEMENTS
+PHẦN TỬ GIẢ
+
+::before Tạo một đối tượng trực tiếp bằng CSS trước đối tượng đã nêu
+
+::after Tạo một đối tượng trực tiếp bằng CSS đứng sau đối tượng đã nêu 
+
+::first-letter Định dạng chữ cái đầu tiên đối với đối tượng đã nêu 
+
+::first-line Định dạng dòng đầu tiên đối với đối tượng đã nêu 
+
+::selection Thay đổi định dạng khi bạn bôi đen vào đối tượng đã nêu -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PSEUDO-ELEMENTS</title>
+        <meta charset="utf-8">
+        <style>
+
+            /* ĐỊNH DẠNG CHO ĐỐI TƯỢNG */
+            .box {
+                height: 100px;
+                width: 100px;
+                background-color: pink;
+            }
+
+            p {
+                font-size: 10px;
+                font-weight: 600;
+            }
+            /* ::before tạo một đối tượng ngay tại CSS và đứng trước đối tượng được nêu ( trong này là .box ) */
+            .box::before {
+                content: "Before";
+                font-size: 10px;
+                display: block;
+                height: 10px;
+                width: 40px;
+                background-color: yellow;
+            }
+
+
+
+            /* ::after tạo một đối tượng ngay tại CSS và đứng sau đối tượng được nêu ( trong đây là .box) */
+            .box::after {
+                content: "HELLO";
+                font-size: 10px;
+                display: block;
+                height: 50px;
+                width: 50px;
+                background-color: red;
+            }
+
+
+            /* ::first-letter sử dụng khi muốn làm nổi bật chữ cái đầu tiên */
+            #letter-test::first-letter {
+                font-size: 20px;
+                color: tomato;
+            }
+
+            /* ::first-line sử dụng nếu bạn muốn làm nổi bật dòng đầu tiên */
+
+            #line-test::first-line {
+                font-size: 15px;
+                color: brown;
+            }
+
+            /* ::selection đổi màu đối tượng khi bôi đen */
+
+            #slection-test::selection {
+                color: pink;
+                background-color: cadetblue;
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <div class="box"></div>
+        <p id="letter-test">ĐÂY LÀ KHI SỬ DỤNG: first-letter</p>
+        <p>Sử dụng first-line:</p>
+        <p id="line-test"> 
+           ĐÂY LÀ DÒNG MỘT <br> ĐÂY LÀ DÒNG HAI 
+        </p>
+
+        <p id="slection-test">SLECTION</p>
+        <p>NO-SLECTION</p>
+
+    </body>
+
+
+</html>

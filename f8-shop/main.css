@@ -1,7 +1,15 @@
+:root {
+    --fontnay10: 10px;
+}
+
 h1 {
     color: rgb(221, 192, 255);
-    font-size: 50px;
+    font-size: 20px;
 }
 p {
     color: red
+}
+
+h2 {
+    font-size: var(--fontnay10);
 }

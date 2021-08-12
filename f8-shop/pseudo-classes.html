@@ -1,0 +1,61 @@
+<!-- 
+LỚP GIẢ
+
+:root: khai báo biến sài var()
+
+:hover: di chuột vào sẽ thực hiện command trong css
+
+:active: bấm vào sẽ thực hiện command trong CSS
+
+:first-child: chọn đối tượng ở đầu
+
+:last-child: chọn đối tượng ở cuối -->
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <title>PSEUDO-CLASSES</title>
+        <meta charset="utf-8">
+
+        <style>
+            .box-hover {
+                height: 10px;
+                width: 10px;
+                background-color: red;   
+            }
+            /* (đối tượng):hover: thực hiện format css khi bạn di chuyển chuột vào nó */
+            .box-hover:hover {
+                background-color: pink;
+            }
+            #hoverid:hover {
+                color: red;
+            }
+            /* (đói tượng):active : thực hiện format trong css khi bấm và giữ chuột */
+
+            .box-active {
+                height: 10px;
+                width: 10px;
+                background-color: pink;
+            }
+            .box-active:active {
+                background-color: red;
+            }
+
+            #activeid:active {
+                color: red;
+            }
+
+        </style>
+    </body>
+
+    <head>
+        1.
+        <div class="box-hover"></div>
+        <p style="font-size: 10px; font-weight: 600;" id="hoverid">HOVER TEST</p>
+        2.
+        <div class="box-active"></div>
+        <p style="font-size: 10px; font-weight: 600;" id="activeid">ACTIVE TEST</p>
+    </head>
+
+
+</html>
