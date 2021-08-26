@@ -1,0 +1,45 @@
+<!-- padding: tạo cho thuộc tính được dày hơn (bổ sung vào)
+
+border: tạo vùng viền xung quanh của thuộc tính
+
+margin: tạo một khoảng cách xung quanh đối tượng (không làm tăng kích
+thước của đối tượng) 
+
+
+box-sizing: border-box; là tự động cộng trừ để thuộc tính đúng bằng kích
+thước đưa vào (width và height)
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PADDING/BODER/MARGIN/BOX-SIZING</title>
+        <style>
+            .box {
+                color: white;
+                height: 60px;
+                width: 60px;
+                font-size: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center; 
+                float:left;
+            }
+            .box1 {
+                background-color: red;
+                padding: 10px 12px 13px;
+            }
+            .box2 {
+                background-color: green;
+                border-bottom: 10px solid red;;
+                border-style:solid;
+                margin: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="box box1">box1</div>
+        <div class="box box2">box2</div>
+    </body>
+</html>
