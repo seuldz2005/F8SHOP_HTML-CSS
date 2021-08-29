@@ -5,9 +5,12 @@ border: tạo vùng viền xung quanh của thuộc tính
 margin: tạo một khoảng cách xung quanh đối tượng (không làm tăng kích
 thước của đối tượng) 
 
+background-clip: đổ màu theo 3 lớp border/pading/content
 
 box-sizing: border-box; là tự động cộng trừ để thuộc tính đúng bằng kích
 thước đưa vào (width và height)
+
+
 -->
 
 <!DOCTYPE html>
@@ -23,17 +26,22 @@ thước đưa vào (width và height)
                 display: flex;
                 align-items: center;
                 justify-content: center; 
-                float:left;
+                float:top;
             }
             .box1 {
                 background-color: red;
                 padding: 10px 12px 13px;
             }
             .box2 {
+                width: 100%;
+                height: 100px;
+                background-clip:content-box;
                 background-color: green;
-                border-bottom: 10px solid red;;
-                border-style:solid;
-                margin: 20px;
+                padding-left: 10px;
+                border-style: dashed;
+                border-top: 10px;
+                border-color: red;
+                margin: 10px;
             }
         </style>
     </head>
